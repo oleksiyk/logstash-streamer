@@ -1,0 +1,30 @@
+{
+    "author": {
+        "name": "Oleksiy Krivoshey",
+        "email": "<oleksiyk@gmail.com>"
+    },
+    "name": "logstash-streamer",
+    "description": "Stream logs line by line to logstash",
+    "version": "0.0.1",
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "dependencies":{
+        "lodash": "~=2.4.0",
+        "bluebird": "~=1.2.x",
+        "fs-persistent-object": ">=0.0.1"
+    },
+    "bugs": {
+        "url": "https://github.com/oleksiyk/logstash-streamer/issues"
+    },
+    "readmeFilename": "README.md",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/oleksiyk/logstash-streamer.git"
+    },
+    "keywords": [
+        "logs",
+        "logstash"
+    ],
+    "license": "MIT"
+}
