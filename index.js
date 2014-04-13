@@ -44,11 +44,22 @@ config.files.forEach(function (file) {
     })
 
     log.on('data', function(d) {
+        var messages = []
         d.split('\n').forEach(function (message) {
             message = message.trim()
-            if(message){
-                sendToLogstash(message, file.fields || {})
+            if(!message){
+                return
             }
+
+            if(file.multiline && file.multiline.pattern && (file.multiline.pattern.test(message) === !!!file.multiline.negatePattern)){
+                messages[messages.length-1] += '\n' + message
+            } else {
+                messages.push(message)
+            }
+        })
+
+        messages.forEach(function (message) {
+            sendToLogstash(message, file.fields || {})
         })
     });
 
