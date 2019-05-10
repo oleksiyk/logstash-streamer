@@ -9,7 +9,7 @@
     "engines": {
         "node": ">=0.10.0"
     },
-    "dependencies":{
+    "dependencies": {
         "lodash": "~=2.4.0",
         "bluebird": "~=1.2.x",
         "fs-persistent-object": ">=0.0.1"
